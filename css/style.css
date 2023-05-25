@@ -1,0 +1,20 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.card .card-body small{
+    display: inline-block;
+    color: #889397;
+    font-size: 12.25;
+}
+.card .card-body a{
+    display: inline-block;
+    color: #21313c;
+    font-size: 14px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.card .card-body .icons{
+    color: #ffc107;
+}
