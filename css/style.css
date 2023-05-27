@@ -1,47 +1,106 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
-h3{
+h3 {
     font-size: 24.5px;
     font-weight: 600;
 }
-#featured-categories, #popular-products{
+#featured-categories, #popular-products {
     margin: 80px 0 48px;
 }
-a, p{
+a, p {
     text-decoration: none;
     font-size: 14px;
 }
-#featured-categories .card img{
+#featured-categories .card img {
     width: 60%;
 }
-#featured-categories .card .card-body{
+#featured-categories .card .card-body {
     display: flex;
     justify-content: center;
     color: #21313c;
     font-weight: 500;
 }
-.card .card-body small{
+.card {
+    transition: .4s;
+}
+.card:hover {
+    border-color: #0aad0a;
+    box-shadow: 5px 5px 5px #dddddd;
+}
+.card:hover .image .icons{
+    z-index: 3;
+}
+.card .image {
+    width: 100%
+}
+.card .image img {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+.card .image .badge{
+    positon: absolute;
+    left: 10px;
+    top: 10px;
+}
+.card .image .icons {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50, -50);
+    transition: .4s;
+}
+.card .card-body small {
     display: inline-block;
     color: #889397;
     font-size: 12.25;
     margin-bottom: 4px;
 }
-.card .card-body a, p{
+.card .card-body h2 {
+    margin-bottom: 8px;
+}
+.card .card-body p, a {
     display: inline-block;
     color: #21313c;
 }
-.review{
+.card .card-body .review {
     font-size: 12.25px;
 }
-.review i{
+.card .card-body .review i {
     color: #ffc107;
 }
-.review span{
+.card .card-body .review span {
     color: #889397; 
+}
+.card .card-body .text-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card .card-body .text-bottom .left {
+    font-size: 14px;
+}
+.card .card-body .text-bottom .left .price {
+    color: #001e2b;
+}
+.card .card-body .text-bottom .left .old-price {
+    color: #889397;
+    text-decoration: line-through;
+}
+.card .card-body .text-bottom .right a{
+    background-color: #0aad0a;
+    color: #ffffff;
+    font-size; 12.25px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.card .card-body .text-bottom .right a:hover[
+    background-color: #099309;
 }
 .box{
     padding: 48px 32px;
@@ -49,23 +108,23 @@ a, p{
     background-size: cover;
     background-position: center;
 }
-#box-1{
+#banner-1 {
     background-image: url(https://freshcart.codescandy.com/assets/images/banner/grocery-banner.png);
 }
-#box-2{
+#banner-2 {
     background-image: url(https://freshcart.codescandy.com/assets/images/banner/grocery-banner-2.jpg);
 }
-.box h3{
+.banner h3 {
     margin-bottom: 4px;
 }
-.box p{
+.banner p {
     color: #5c6c75;
     margin-bottom: 16px;
 }
-.box p span{
+.banner p span {
     font-weight: bolder;
 }
-.box a{
+.banner a {
     display: block;
     width: fit-content;
     background-color: #001e2b;
@@ -73,13 +132,13 @@ a, p{
     padding: 8.8px 16px;
     border-radius: 8px;
 }
-@media (max-width: 768px){
-    .sm-none{
+@media only screen and (max-width: 768px) {
+    .card.sm-none {
         display: none;
     }
 }
-@media (max-width: 1400px){
-    .xl-none{
+@media only screen and (max-width: 1400px) {
+    .card.sm-none.xl-none {
         display: none;
     }
 }
