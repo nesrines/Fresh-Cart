@@ -32,28 +32,38 @@ a, p {
     box-shadow: 5px 5px 5px #dddddd;
 }
 .card:hover .image .icons{
-    z-index: 3;
+    opacity: 1;
 }
 .card .image {
-    width: 100%
+    width: 100%;
+    position: relative;
 }
 .card .image img {
     width: 100%;
-    position: relative;
-    z-index: 1;
 }
 .card .image .badge{
-    positon: absolute;
-    left: 10px;
-    top: 10px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
 }
 .card .image .icons {
     position: absolute;
-    z-index: -1;
+    opacity: 0;
     left: 50%;
-    top: 50%;
-    transform: translate(-50, -50);
+    top: 75%;
+    transform: translate(-50%, -50%);
     transition: .4s;
+}
+.card .image .icons i {
+    background-color: #ffffff;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: .3s;
+}
+.card .image .icons i:hover{
+    background-color: #0aad0a;
+    color: #ffffff;
 }
 .card .card-body small {
     display: inline-block;
@@ -77,32 +87,32 @@ a, p {
 .card .card-body .review span {
     color: #889397; 
 }
-.card .card-body .text-bottom {
+.card .card-body .bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.card .card-body .text-bottom .left {
+.card .card-body .bottom .left {
     font-size: 14px;
 }
-.card .card-body .text-bottom .left .price {
+.card .card-body .bottom .left .price {
     color: #001e2b;
 }
-.card .card-body .text-bottom .left .old-price {
+.card .card-body .bottom .left .old-price {
     color: #889397;
     text-decoration: line-through;
 }
-.card .card-body .text-bottom .right a{
+.card .card-body .bottom .right a{
     background-color: #0aad0a;
     color: #ffffff;
-    font-size; 12.25px;
+    font-size: 12.25px;
     padding: 4px 8px;
     border-radius: 4px;
 }
-.card .card-body .text-bottom .right a:hover[
+.card .card-body .bottom .right a:hover{
     background-color: #099309;
 }
-.box{
+.banner{
     padding: 48px 32px;
     border-radius: 8px;
     background-size: cover;
@@ -133,12 +143,12 @@ a, p {
     border-radius: 8px;
 }
 @media only screen and (max-width: 768px) {
-    .card.sm-none {
+    .sm-none {
         display: none;
     }
 }
 @media only screen and (max-width: 1400px) {
-    .card.sm-none.xl-none {
+    .xl-none {
         display: none;
     }
 }
